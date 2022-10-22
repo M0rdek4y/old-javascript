@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OldJavaScript</title>
+    <script>
+        var space = false;
+        function mudaEt(tipo) {
+            if (tipo == 1) {
+                arquivo = "../html-css/media/images/png/logos/logo.png";
+            }
+            if (tipo == 2) {
+                arquivo = "../html-css/media/images/png/logos/logoeye.png";
+            }
+            if (tipo == 3) {
+                arquivo = "../html-css/media/images/png/logos/logoeyespace.png";
+            }
+            if (!space) {
+                document.getElementById("et").src = arquivo;
+                if (tipo == 3) {
+                    space = true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <img id="et" src="../html-css/media/images/png/logos/logo.png" onmouseout="mudaEt(1)" onmousemove="mudaEt(2)" onclick="mudaEt(3)">
+</body>
+</html>
